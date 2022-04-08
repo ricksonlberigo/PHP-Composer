@@ -1,0 +1,38 @@
+{
+  "name": "ricksonl/buscador-cursos",
+  "description": "Criando uma aplica\u0000\u0000o que busca cursos de plataformas de cursos online",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "App\\BuscadorCursos\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "RicksonLBerigo",
+      "email": "ricksonl.berigo@outlook.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.4",
+    "symfony/dom-crawler": "^6.0",
+    "symfony/css-selector": "^6.0"
+  },
+  "require-dev": {
+    "phan/phan": "^5.3",
+    "squizlabs/php_codesniffer": "^3.6"
+  },
+  "scrits": {
+    "phpcs": "phpcs --standard=PSR12 src\\",
+    "phan": "phan --allow-polyfill-parser",
+    "check": [
+      "@phpcs",
+      "@phan"
+    ]
+  },
+  "scripts-descriptions": {
+    "check": "Comando que irá rodar os pacotes phan e codesniffer",
+    "phpcs": "Comando para utilizar o pacote php_codesniffer",
+    "phan": "Comando para utilizar o pacote phan"
+  }
+}
